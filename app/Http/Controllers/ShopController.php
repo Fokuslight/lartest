@@ -9,8 +9,10 @@ use Illuminate\Http\Request;
 
 class ShopController extends Controller
 {
+
     public function index()
     {
+
         $categories = Category::get();
         $tags = Tag::get();
         $products = Product::paginate(15);
